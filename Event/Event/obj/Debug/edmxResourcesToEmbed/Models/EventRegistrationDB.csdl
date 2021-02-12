@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventRegistrationDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EventData">
+    <Key>
+      <PropertyRef Name="eventID" />
+    </Key>
+    <Property Name="eventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="eventTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="eventStartDate" Type="DateTime" Precision="3" />
+    <Property Name="eventDurationInMin" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LoginData">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EventRegistrationDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EventData" EntityType="Self.EventData" />
+    <EntitySet Name="LoginData" EntityType="Self.LoginData" />
+  </EntityContainer>
+</Schema>

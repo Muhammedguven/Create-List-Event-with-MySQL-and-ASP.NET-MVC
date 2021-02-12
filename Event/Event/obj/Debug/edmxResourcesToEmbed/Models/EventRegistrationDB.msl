@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EventRegistrationDBModelStoreContainer" CdmEntityContainer="EventRegistrationDBEntities">
+    <EntitySetMapping Name="EventData">
+      <EntityTypeMapping TypeName="EventRegistrationDBModel.EventData">
+        <MappingFragment StoreEntitySet="EventData">
+          <ScalarProperty Name="eventID" ColumnName="eventID" />
+          <ScalarProperty Name="eventTitle" ColumnName="eventTitle" />
+          <ScalarProperty Name="eventStartDate" ColumnName="eventStartDate" />
+          <ScalarProperty Name="eventDurationInMin" ColumnName="eventDurationInMin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginData">
+      <EntityTypeMapping TypeName="EventRegistrationDBModel.LoginData">
+        <MappingFragment StoreEntitySet="LoginData">
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

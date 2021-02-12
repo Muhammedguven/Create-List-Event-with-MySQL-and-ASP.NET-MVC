@@ -1,0 +1,21 @@
+THE PROGRAM NEED TO THESE TABLES USING [MSSql Server database] 
+Also you must add the packages which the program need.
+
+
+CREATE TABLE [dbo].[LoginData] (
+ [userName] VARCHAR (50) NOT NULL,
+ [password] NVARCHAR (50) NOT NULL,
+ PRIMARY KEY CLUSTERED ([userName] ASC)
+);
+
+
+
+
+
+CREATE TABLE [dbo].[EventData] (
+ [eventID] INT NOT NULL IDENTITY(1,1),
+ [eventTitle] VARCHAR (50) NULL,
+ [eventStartDate] DATETIME NULL,
+ [eventDurationInMin] INT NULL,
+ PRIMARY KEY CLUSTERED ([eventID] ASC)
+);

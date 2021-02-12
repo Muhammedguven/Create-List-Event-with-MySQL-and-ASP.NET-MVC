@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventRegistrationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EventData">
+    <Key>
+      <PropertyRef Name="eventID" />
+    </Key>
+    <Property Name="eventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eventTitle" Type="varchar" MaxLength="50" />
+    <Property Name="eventStartDate" Type="datetime" />
+    <Property Name="eventDurationInMin" Type="int" />
+  </EntityType>
+  <EntityType Name="LoginData">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EventRegistrationDBModelStoreContainer">
+    <EntitySet Name="EventData" EntityType="Self.EventData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginData" EntityType="Self.LoginData" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Main</title>
+</head>
+<body>
+    <br />
+    <div>
+
+        <a class="btn btn-primary" onclick="location.href='@Url.Action("EventList", "Home")'">Event List</a>
+
+    </div>
+    <br />
+    <div>
+
+        <a class="btn btn-primary" onclick="location.href='@Url.Action("CreateNewEvent", "Home")'">Create New Event</a>
+    </div>
+</body>
+</html>
